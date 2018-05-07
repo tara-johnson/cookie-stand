@@ -1,6 +1,4 @@
-# cookie-stand
-
-# Project Name
+# Cookie Stand
 
 **Author**: Tara Johnson
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
