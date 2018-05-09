@@ -1,0 +1,28 @@
+body {
+    background-color: #FFFFFF;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: lighter;
+    color: #223843;
+}
+
+table {
+    /* border: grey solid 4px; */
+    border-spacing: 0px;
+}
+
+th {
+    padding: 10px;
+    border: solid black 1px;
+    /* background-color: lightgray; */
+}
+
+td {
+    padding: 10px;
+    border: solid black 1px;
+    text-align: center;
+}
