@@ -10,8 +10,6 @@ var allStores = [];
 // access the table that is in the DOM
 var storeTable = document.getElementById('stores');
 
-// ============================================================
-// WEDNESDAY LAB - ADD LOCATION VIA SUBMIT AND EVENT LISTENER //
 // Global variables for DOM access and such
 var submitForm = document.getElementById('add-store-location-form');
 
@@ -26,7 +24,7 @@ var AddStore = function(event){
 
   var newStore = new Store(name, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerCustomer);
 
-  console.log(newStore);
+  // console.log(newStore);
 
   event.preventDefault(); // gotta have it for this purpose. prevents page reload on a 'submit' event
 
@@ -35,26 +33,23 @@ var AddStore = function(event){
   event.target.minCustomersPerHour.value = null;
   maxCustomersPerHour = event.target.maxCustomersPerHour.value = null;
   event.target.avgCookiesPerCustomer.value = null;
-
+  
   renderAll();
-
+  
 };
-
-// Event handler for the submission of new store
-function checkSubmit(event) {
-  // console.log('log of the event object', event);
-  // console.log('log of the event.target', event.target);
-  // console.log('log of the event.target.name', event.target.name);
-  console.log(event.target.name.value);
-
-  event.preventDefault(); // gotta have it for this purpose. prevents page reload on a 'submit' event
-}
 
 // Event listener for location submit
 submitForm.addEventListener('submit', AddStore);
 
-// ============================================================
+// Event handler for the submission of new store
+// function checkSubmit(event) {
+  // console.log('log of the event object', event);
+  // console.log('log of the event.target', event.target);
+  // console.log('log of the event.target.name', event.target.name);
+  // console.log(event.target.name.value);
 
+  // event.preventDefault(); // gotta have it for this purpose. prevents page reload on a 'submit' event
+// }
 
 // constructor for store objects
 function Store(name, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerCustomer) {
@@ -69,7 +64,7 @@ function Store(name, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerCust
 }
 
 Store.prototype.calcCustomersEachHour = function(){
-  for (var i = 0; i < hours.length; i++){
+  for (var i in hours){
     // Calculate a random number between min/max and put it into the string
     this.customersEachHour.push(random(this.minCustomersPerHour, this.maxCustomersPerHour));
     }
@@ -78,7 +73,7 @@ Store.prototype.calcCustomersEachHour = function(){
 Store.prototype.calcCookiesSoldEachHour = function(){
   this.calcCustomersEachHour();
   // Multiply our random customers by the average cookies per hour
-  for (var i = 0; i < hours.length; i++){
+  for (var i in hours){
     this.cookiesSoldEachHour.push(Math.ceil(this.customersEachHour[i] * this.avgCookiesPerCustomer));
     this.totalDailyCookieSales = this.totalDailyCookieSales + this.cookiesSoldEachHour[i];
   }
@@ -133,7 +128,7 @@ function makeHeaderRow() {
   // append the th to the tr
   trEl.appendChild(thEl);
 
-  for (var i = 0; i < hours.length; i++){
+  for (var i in hours){
   // create th
   thEl = document.createElement('th');
   thEl.style.backgroundColor = 'lightgrey';
@@ -167,17 +162,16 @@ new Store('Capital Hill', 20, 38, 2.3);
 new Store('Alki', 2, 16, 4.6);
 
 function renderAll() {
+  storeTable.innerHTML = '';  
+
   // table header row
   makeHeaderRow();
 
-  document.getElementById('stores').innerHTML = "";
-
   // Call the render function to create the page
-  for (var i = 0; i < allStores.length; i++){
+  for (var i in allStores){
     allStores[i].render();
   };
+  
 }
 
 renderAll();
-
-// console.table(allStores);

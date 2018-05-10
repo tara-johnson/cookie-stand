@@ -17,22 +17,20 @@
     <legend>Add a new store:</legend>
 
     <label for="name">Store location: </label>
-    <input name="name" type="text" size="15" /><br />
+    <input name="name" type="text" size="15" required /><br />
 
     <label for="minCustomersPerHour">Minimum customers per hour: </label>
-    <input name="minCustomersPerHour" type="number" size="15" /><br />
+    <input name="minCustomersPerHour" type="number" size="15" step="0.01" required /><br />
 
     <label for="maxCustomersPerHour">Maximum customers per hour: </label>
-    <input name="maxCustomersPerHour" type="number" size="15" /><br />
+    <input name="maxCustomersPerHour" type="number" size="15" step="0.01" required /><br />
 
     <label for="avgCookiesPerCustomer">Average cookies per customer: </label>
-    <input name="avgCookiesPerCustomer" type="number" size="15" />
+    <input name="avgCookiesPerCustomer" type="number" size="15" step="0.01" required />
 
     <button type="submit" id="submit-store">Add store</button>
   </fieldset>
 </form>
-
-
 
 <table id="stores"></table>
 
