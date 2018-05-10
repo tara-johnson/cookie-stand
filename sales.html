@@ -11,6 +11,29 @@
 
 <h1>Cookies Needed By Location Each Day</h1>
 
+<!--  -->
+<form id="add-store-location-form">
+  <fieldset>
+    <legend>Add a new store:</legend>
+
+    <label for="name">Store location: </label>
+    <input name="name" type="text" size="15" /><br />
+
+    <label for="minCustomersPerHour">Minimum customers per hour: </label>
+    <input name="minCustomersPerHour" type="number" size="15" /><br />
+
+    <label for="maxCustomersPerHour">Maximum customers per hour: </label>
+    <input name="maxCustomersPerHour" type="number" size="15" /><br />
+
+    <label for="avgCookiesPerCustomer">Average cookies per customer: </label>
+    <input name="avgCookiesPerCustomer" type="number" size="15" />
+
+    <button type="submit" id="submit-store">Add store</button>
+  </fieldset>
+</form>
+
+
+
 <table id="stores"></table>
 
 <script type="text/javascript" src="js/app.js"></script>
