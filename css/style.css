@@ -9,6 +9,10 @@ div {
     text-align: center;
 }
 
+a:link, a:visited, a:active {
+    color: #FFFFFF;
+}
+
 p {
     font-family: 'Times New Roman', Times, serif;
     color: #EFF1F3;
