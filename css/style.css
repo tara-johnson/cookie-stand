@@ -1,6 +1,9 @@
 body {
-    /* background-color: #223843; */
     margin: 20px;
+}
+
+.background {
+    background-color: #223843;
 }
 
 div {
@@ -27,6 +30,14 @@ h1 {
     /* color: #EFF1F3; */
     /* text-align: right; */
     margin-bottom: 20px;
+}
+
+.title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    /* font-size: 48px; */
+    color: #EFF1F3;
+    text-align: right;
+    /* margin-bottom: 20px; */
 }
 
 .floatRight {
