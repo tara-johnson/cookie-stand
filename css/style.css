@@ -1,212 +1,56 @@
 body {
-    width: 960px;
-    background-color: #D57A66;
-    margin: 10px auto;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-hr {
-    border-color: #2C2824;
-    width: 150px;
+    background-color: #223843;
+    margin: 20px;
 }
 
 div {
+    /* margin: 20px; */
+    /* border: solid black 2px; */
     text-align: center;
-}
-
-p {
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-
-/* ------------------------------ */
-/* Header styles */
-/* ------------------------------ */
-
-h1 {
-    font-family: 'Barrio', cursive;
-    font-size: 48px;
-    color: #F7E6E3;
-    filter: drop-shadow(2px 2px 1px #754338);
-}
-
-header img {
-    margin-top: 10px;
-}
-
-header p {
-    color: #F7E6E3;
-    background-color: #686461;
-    padding: 10px 0px 7px 0px;
-    border-bottom: #2C2824 2px solid;
-    /* filter: drop-shadow(1px 1px 1px #2C2824); */
-}
-
-.intro {
-    background-color: #D57A66;
-    color: #2C2824;
-    font-size: 18px;
-    line-height: 24px;
-    padding-bottom: 15px;
-}
-
-/* ------------------------------ */
-/* Main styles */
-/* ------------------------------ */
-
-.columnLeft {
-    float: left;
-    width: 200px;
-    height: 460px;
-    background-color: #ACAAA8;
-}
-
-.columnRight {
-    float: right;
-    width: 200px;
-    height: 460px;
-    background-color: #FFF;
-    overflow: auto;
-}
-
-main p {
-    padding: 15px 10px 0px 10px;
-}
-
-main ul{
-    margin: 15px 0px;
-    color: #2C2824;
-}
-
-main li {
-    font-size: 12px;
-}
-
-.name {
-    font-size: 14px;
-}
-
-.columnHeader {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.hero {
-    width: 960px;
-    height: 460px;
-    background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url("/img/family.jpg");
-    background-repeat: no-repeat;
-    background-position: 0px -20px;
-    border-bottom: #2C2824 2px solid;
-}
-
-button {
-    width: 150px;
-    border: none;
-    padding: 5px 5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #2C2824;
-    background: #ACAAA8;
-    font-size: 12px;
-    margin: 2px 0px 15px 0px;
-    transition: 350ms;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #D57A66;
-}
-
-footer ul {
-    margin: 0px auto;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-footer li {
-    margin: 20px 10px;
-    display: inline-block;
-    color: #F7E6E3;
 }
 
 a:link, a:visited, a:active {
-    text-decoration: none;
-    color: #F7E6E3;
+    color: #FFFFFF;
 }
 
-a:hover {
-    color: #2C2824;
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: #EFF1F3;
 }
 
-/* ------------------------------ */
-/* Sales styles */
-/* ------------------------------ */
-
-header p.home {
-    background-color: #D57A66;
-    border: none;
+.bodyCopy {
+    margin: 10px;
+    color: #223843;
 }
 
-form {
-    font-family: 'Roboto Condensed', sans-serif;
+h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 48px;
+    color: #EFF1F3;
+    text-align: right;
 }
 
-form legend {
-    font-size: 18px;
-    margin-bottom: 10px;
+.floatRight {
+    float: right;
 }
 
-form fieldset {
-    margin: 10px 0px;
-    background-color: #F7E6E3;
-    border: 2px solid #2C2824;
+.floatLeft {
+    float: left;
+}
+
+.mainContent {
+    border: solid black 2px;
+    background-color: #D8B4A0;
+    color: #61210F;
+    height: 400px;
+    margin: 20px 0px 0px 0px;
     padding: 10px;
-    border-radius: 10px;
-}
-
-form li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-form input {
-    width: 50px;
-    margin-top: 3px;
-}
-
-.location {
-    width: 100px;
-}
-
-form button {
-    display: inline-block;
-    width: 100px;
-    height: 30px;
-    background-color: #ACAAA8;
-    margin: 0px;
-}
-
-form button:hover {
-    background: #2C2824;
-    color: #F7E6E3;
-}
-
-table {
-    font-family: 'Roboto Condensed', sans-serif;
-    border: solid #2C2824 2px;
-    border-spacing: 0px;
-}
-
-th {
-    padding: 10px;
-    background-color: #2C2824;
-    color: #F7E6E3;
-    vertical-align: bottom;
+    /* border: solid white 2px; */
 }
 
 td {
+    border: solid #223843 2px;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
-    border: solid #2C2824 2px;
-    background-color: #F7E6E3;
-    text-align: center;
+    background-color: #EFF1F3;
 }
