@@ -77,22 +77,22 @@ Store.prototype.calcCookiesSoldEachHour = function(){
   // multiply our random customers by the average cookies per hour
   for (var i in hours){
     this.cookiesSoldEachHour[i] = (Math.ceil(this.customersEachHour[i] * this.avgCookiesPerCustomer));
-    this.totalDailyCookieSales = this.totalDailyCookieSales + this.cookiesSoldEachHour[i];
+    this.totalDailyCookieSales += this.cookiesSoldEachHour[i];
   }
 }
 
-Store.prototype.calcTotalCookiesPerStorePerHour = function(){
-  this.calcCookiesSoldEachHour();
-  // create new array of cookies per store per hour
-  for (var i in hours){
-    for (j = 0; j < allStores.length; j++){
-      this.cookiesPerStorePerHour.push(allStores[j][i]);
-    }
-  }
-  for (var i in hours){
-    this.totalCookiesPerStorePerHour = this.totalCookiesPerStorePerHour += this.cookiesPerStorePerHour[i];
-  }
-}
+// Store.prototype.calcTotalCookiesPerStorePerHour = function(){
+//   this.calcCookiesSoldEachHour();
+//   // create new array of cookies per store per hour
+//   for (var i in hours){
+//     for (j = 0; j < allStores.length; j++){
+//       this.cookiesPerStorePerHour.push(allStores[j][i]);
+//     }
+//   }
+//   for (var i in hours){
+//     this.totalCookiesPerStorePerHour = this.totalCookiesPerStorePerHour += this.cookiesPerStorePerHour[i];
+//   }
+// }
 
 
 Store.prototype.render = function() {
@@ -104,13 +104,13 @@ Store.prototype.render = function() {
 
   // create td
   var tdEl = document.createElement('td');
-  tdEl.style.backgroundColor = 'lightgrey';
   // give td content (name for individual stores)
   tdEl.textContent = this.name;
+  tdEl.style.fontWeight = 'bold';
   // append the td to the tr
   trEl.appendChild(tdEl);
 
-  for (var i = 0; i < this.cookiesSoldEachHour.length; i++){
+  for (var i in hours){
     // create td
     tdEl = document.createElement('td');
     // give td content (Hours for individual stores)
@@ -138,27 +138,27 @@ function makeHeaderRow() {
 
   // create td
   var thEl = document.createElement('th');
-  thEl.style.border = 'none';
   // give th content
   thEl.textContent = 'Store Location';
+  thEl.style.fontWeight = 'bold';
   // append the th to the tr
   trEl.appendChild(thEl);
 
   for (var i in hours){
   // create th
   thEl = document.createElement('th');
-  thEl.style.backgroundColor = 'lightgrey';
     // give th content (store hours)
   thEl.textContent = hours[i];
+  thEl.style.fontWeight = 'bold';
   // append the th to the tr
   trEl.appendChild(thEl);
   }
 
   // create td
   var thEl = document.createElement('th');
-  thEl.style.backgroundColor = 'lightgrey';
   // give th content (daily location total)
   thEl.textContent = 'Daily Location Total';
+  thEl.style.fontWeight = 'bold';
   // append the th to the tr
   trEl.appendChild(thEl);
 
@@ -205,6 +205,8 @@ function makeHeaderRow() {
 // }
 
 function random(min, max){
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min; // via MDN
 }
 
